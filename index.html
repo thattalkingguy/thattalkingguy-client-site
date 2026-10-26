@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ThattalkingGuy... | Digital Business Builder</title>
+
+  <meta
+    name="description"
+    content="ThattalkingGuy... builds AI-powered websites, ecommerce systems, marketplaces, digital products, business automation and custom web applications."
+  />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080b12;
+      color: #f5f7fb;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 11, 18, 0.94);
+      border-bottom: 1px solid #202633;
+      backdrop-filter: blur(12px);
+    }
+
+    nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: #55d6be;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      font-size: 0.95rem;
+      color: #c8ceda;
+    }
+
+    .nav-links a:hover {
+      color: #55d6be;
+    }
+
+    .nav-button {
+      padding: 11px 17px;
+      border-radius: 999px;
+      background: #55d6be;
+      color: #06100e;
+      font-weight: 800;
+    }
+
+    .hero {
+      padding: 105px 0 90px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(85, 214, 190, 0.12), transparent 32%),
+        radial-gradient(circle at 20% 20%, rgba(86, 110, 255, 0.10), transparent 28%);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 13px;
+      border: 1px solid #2b3948;
+      border-radius: 999px;
+      color: #55d6be;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      max-width: 850px;
+      font-size: clamp(3rem, 7vw, 5.8rem);
+      line-height: 0.98;
+      letter-spacing: -4px;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: #55d6be;
+    }
+
+    .hero-text {
+      max-width: 720px;
+      font-size: 1.2rem;
+      color: #b7bfcc;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 9px;
+      font-weight: 800;
+      border: 1px solid #34404f;
+    }
+
+    .btn-primary {
+      background: #55d6be;
+      color: #06100e;
+      border-color: #55d6be;
+    }
+
+    .btn-secondary {
+      color: #f5f7fb;
+    }
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading p {
+      color: #8f99a9;
+      margin-top: 10px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -1.5px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 28px;
+      background: #10151f;
+      border: 1px solid #202a38;
+      border-radius: 16px;
+    }
+
+    .card:hover {
+      border-color: #55d6be;
+    }
+
+    .card-number {
+      color: #55d6be;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #9da7b7;
+      font-size: 0.96rem;
+    }
+
+    .projects {
+      background: #0d1119;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project {
+      padding: 30px;
+      border-radius: 16px;
+      background: #111722;
+      border: 1px solid #222d3b;
+    }
+
+    .project h3 {
+      margin-bottom: 12px;
+    }
+
+    .project p {
+      color: #9da7b7;
+    }
+
+    .project-tag {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #18232d;
+      color: #55d6be;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .price-card {
+      padding: 32px;
+      background: #10151f;
+      border: 1px solid #263140;
+      border-radius: 16px;
+    }
+
+    .price-card.featured {
+      border-color: #55d6be;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: 900;
+      margin: 16px 0;
+    }
+
+    .price-card p {
+      color: #9da7b7;
+      margin-bottom: 20px;
+    }
+
+    .about {
+      background: #0d1119;
+    }
+
+    .about-box {
+      max-width: 850px;
+    }
+
+    .about-box p {
+      color: #adb6c5;
+      font-size: 1.08rem;
+      margin-top: 17px;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 16px auto 30px;
+      color: #9da7b7;
+    }
+
+    footer {
+      border-top: 1px solid #202633;
+      padding: 30px 0;
+      color: #7f8998;
+      font-size: 0.9rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* Direct WhatsApp enquiry button */
+    #whatsapp-float {
+      position: fixed;
+      left: 24px;
+      bottom: 24px;
+      z-index: 99998;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: #25d366;
+      color: #062b16;
+      font-weight: 800;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    #whatsapp-float:hover {
+      filter: brightness(1.06);
+      transform: translateY(-1px);
+    }
+
+    /* Sharon AI Assistant */
+    #sharon-launcher {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 99999;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 20px;
+      background: #111;
+      color: #fff;
+      font: 600 15px Arial, sans-serif;
+      cursor: pointer;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    #sharon-chat {
+      display: none;
+      position: fixed;
+      right: 24px;
+      bottom: 82px;
+      width: min(380px, calc(100vw - 32px));
+      height: 560px;
+      z-index: 100000;
+      background: #fff;
+      color: #111;
+      border: 1px solid #ddd;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.25);
+      font-family: Arial, sans-serif;
+    }
+
+    #sharon-header {
+      min-height: 76px;
+      padding: 15px 16px;
+      background: linear-gradient(135deg, #111 0%, #242424 100%);
+      color: #fff !important;
+    }
+
+    .sharon-brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .sharon-avatar {
+      width: 40px;
+      height: 40px;
+      flex: 0 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #fff;
+      color: #111;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .sharon-brand strong {
+      display: block;
+      color: #fff !important;
+      font-size: 15px;
+      line-height: 1.3;
+    }
+
+    .sharon-brand span {
+      display: block;
+      margin-top: 4px;
+      color: #fff !important;
+      font-size: 12px;
+      opacity: 0.78;
+    }
+
+    .sharon-status-dot {
+      display: inline-block !important;
+      width: 7px;
+      height: 7px;
+      margin-right: 5px;
+      border-radius: 50%;
+      background: #4ade80;
+      vertical-align: middle;
+    }
+
+    #sharon-messages {
+      height: calc(100% - 132px);
+      padding: 16px;
+      overflow-y: auto;
+      background: #f7f7f7;
+      color: #111 !important;
+    }
+
+    .sharon-message {
+      display: block !important;
+      width: fit-content;
+      max-width: 85%;
+      margin-bottom: 12px;
+      padding: 10px 13px;
+      border-radius: 14px;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-size: 14px !important;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      visibility: visible !important;
+      opacity: 1 !important;
+      overflow-wrap: anywhere;
+    }
+
+    .sharon-bot {
+      margin-right: auto;
+      background: #fff !important;
+      color: #111 !important;
+      border: 1px solid #e5e5e5;
+    }
+
+    .sharon-user {
+      margin-left: auto;
+      background: #111 !important;
+      color: #fff !important;
+      border: 1px solid #111;
+    }
+
+    #sharon-form {
+      display: flex;
+      gap: 8px;
+      padding: 10px;
+      border-top: 1px solid #ddd;
+      background: #fff;
+    }
+
+    #sharon-input {
+      flex: 1;
+      min-width: 0;
+      padding: 11px 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      outline: none;
+      font-size: 14px;
+      color: #111;
+      background: #fff;
+    }
+
+    #sharon-form button {
+      border: 0;
+      border-radius: 10px;
+      padding: 0 15px;
+      background: #111;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    #sharon-form button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .services-grid,
+      .project-grid,
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero {
+        padding-top: 75px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      #sharon-launcher {
+        right: 16px;
+        bottom: 16px;
+      }
+
+      #whatsapp-float {
+        left: 12px;
+        bottom: 16px;
+        padding: 12px 14px;
+        font-size: 13px;
+      }
+
+      #sharon-chat {
+        right: 16px;
+        bottom: 76px;
+        width: calc(100vw - 32px);
+        height: min(560px, calc(100vh - 100px));
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">Thattalking<span>Guy...</span></a>
+
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#pricing">Packages</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+
+        <a href="https://wa.me/2347047332966" class="nav-button" target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+
+        <div class="eyebrow">
+          DIGITAL BUSINESS BUILDER
+        </div>
+
+        <h1>
+          I build digital businesses,
+          <span>not just websites.</span>
+        </h1>
+
+        <p class="hero-text">
+          I help entrepreneurs, creators and businesses turn ideas into
+          practical digital products, websites, ecommerce systems,
+          marketplaces, automations and custom web applications.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#services" class="btn btn-primary">
+            Explore My Services
+          </a>
+
+          <a href="#work" class="btn btn-secondary">
+            See My Work
+          </a>
+
+          <a href="https://wa.me/2347047332966?text=Hello%20ThattalkingGuy...%2C%20I%27d%20like%20to%20discuss%20a%20website%20or%20AI%20project." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+            Get a Free Quote on WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>What I Build</h2>
+          <p>
+            From a simple business website to a complete digital ecosystem,
+            I focus on building useful systems that can grow with the business.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <div class="card">
+            <div class="card-number">01</div>
+            <h3>AI-Powered Websites</h3>
+            <p>
+              Modern websites designed around your business, customers,
+              content and growth goals — with AI where it creates real value.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">02</div>
+            <h3>Ecommerce Systems</h3>
+            <p>
+              Online stores and digital commerce systems for products,
+              services and scalable online businesses.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">03</div>
+            <h3>Multi-Vendor Marketplaces</h3>
+            <p>
+              Platforms that bring buyers, sellers, creators and businesses
+              together in one digital ecosystem.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">04</div>
+            <h3>Digital Product Platforms</h3>
+            <p>
+              Build and sell ebooks, courses, templates, tools, memberships
+              and other digital products.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">05</div>
+            <h3>Business Automation</h3>
+            <p>
+              Connect forms, payments, notifications, customer workflows
+              and repetitive business processes.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">06</div>
+            <h3>Custom Web Applications</h3>
+            <p>
+              Custom digital systems built around specific business
+              requirements instead of forcing your business into a template.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="work" class="projects">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Selected Work</h2>
+          <p>
+            A few examples of the type of digital products and ecosystems
+            I work on.
+          </p>
+        </div>
+
+        <div class="project-grid">
+
+          <div class="project">
+            <h3>HangoutsNChill</h3>
+            <p>
+              A digital growth ecosystem combining community, marketplace,
+              academy, creators, earning opportunities and investment education.
+            </p>
+            <span class="project-tag">Digital Ecosystem</span>
+          </div>
+
+          <div class="project">
+            <h3>ÀTÚNBÍ Entertainment</h3>
+            <p>
+              A professional entertainment platform combining artist
+              management, bookings, music and digital presence.
+            </p>
+            <span class="project-tag">Entertainment Platform</span>
+          </div>
+
+          <div class="project">
+            <h3>AI Business Launch Kit</h3>
+            <p>
+              A concept for helping entrepreneurs use AI tools and digital
+              systems to launch and develop online businesses.
+            </p>
+            <span class="project-tag">AI + Business</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Simple Starting Packages</h2>
+          <p>
+            Starting points for businesses at different stages. Final pricing
+            depends on the project requirements.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <div class="price-card">
+            <h3>Quick Fix</h3>
+            <div class="price">$40+</div>
+            <p>Focused Website Repair or Small Fix</p>
+            <a href="https://wa.me/2347047332966?text=Hello%20ThattalkingGuy...%2C%20I%27d%20like%20to%20discuss%20your%20Quick%20Fix%20package." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              Discuss on WhatsApp
+            </a>
+          </div>
+
+          <div class="price-card featured">
+            <h3>Business</h3>
+            <div class="price">$399+</div>
+            <p>AI Ecommerce System</p>
+            <a href="https://wa.me/2347047332966?text=Hello%20ThattalkingGuy...%2C%20I%27d%20like%20to%20discuss%20your%20Business%20package." class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              Discuss on WhatsApp
+            </a>
+          </div>
+
+          <div class="price-card">
+            <h3>Advanced</h3>
+            <div class="price">$899+</div>
+            <p>Digital Business System</p>
+            <a href="https://wa.me/2347047332966?text=Hello%20ThattalkingGuy...%2C%20I%27d%20like%20to%20discuss%20your%20Advanced%20package." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              Discuss on WhatsApp
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="about-box">
+          <h2>Who is ThattalkingGuy...?</h2>
+
+          <p>
+            I'm a digital business builder focused on turning ideas into
+            practical online systems.
+          </p>
+
+          <p>
+            My work sits at the intersection of technology, AI, business,
+            ecommerce, digital products, automation and online communities.
+          </p>
+
+          <p>
+            The goal isn't simply to put a website online.
+            The goal is to build something useful that can become part of
+            the business itself.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <div class="container">
+
+        <h2>Have a digital business idea?</h2>
+
+        <p>
+          Tell me what you're trying to build. We can turn the idea into
+          a clear digital product, website or business system.
+        </p>
+
+        <div class="hero-actions" style="justify-content:center;">
+          <a
+            href="https://wa.me/2347047332966?text=Hello%20ThattalkingGuy...%2C%20I%27d%20like%20a%20free%20quote%20for%20a%20website%20or%20AI%20project."
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get a Free Quote on WhatsApp
+          </a>
+
+          <a
+            href="mailto:thattalkingguy@gmail.com"
+            class="btn btn-secondary"
+          >
+            Email Me
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-inner">
+        <div>
+          © 2026 ThattalkingGuy... All rights reserved.
+        </div>
+
+        <div>
+          AI • Websites • Ecommerce • Automation • Digital Business
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Direct WhatsApp enquiry -->
+  <a
+    id="whatsapp-float"
+    href="https://wa.me/2347047332966?text=Hello%20ThattalkingGuy...%2C%20I%27d%20like%20to%20discuss%20a%20website%20or%20AI%20project."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact ThattalkingGuy... on WhatsApp"
+  >
+    <span aria-hidden="true">✆</span> WhatsApp Me
+  </a>
+
+  <!-- Sharon AI Assistant -->
+  <button id="sharon-launcher" type="button">💬 Chat with Sharon</button>
+
+  <div id="sharon-chat" aria-label="Sharon AI Client Assistant">
+    <div id="sharon-header">
+      <div class="sharon-brand">
+        <div class="sharon-avatar">S</div>
+        <div>
+          <strong>Sharon - ThattalkingGuy...</strong>
+          <span><span class="sharon-status-dot"></span> AI Client Assistant</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="sharon-messages">
+      <div class="sharon-message sharon-bot">
+        Hi! I'm Sharon 👋 How can I help you today?
+      </div>
+    </div>
+
+    <form id="sharon-form">
+      <input
+        id="sharon-input"
+        type="text"
+        placeholder="Tell me what you need..."
+        autocomplete="off"
+      />
+      <button id="sharon-send" type="submit">Send</button>
+    </form>
+  </div>
+
+  <script>
+    (() => {
+      const API_URL =
+        "https://thattalkingguy-sharon-backend.vercel.app/api/chat";
+
+      const launcher = document.getElementById("sharon-launcher");
+      const chat = document.getElementById("sharon-chat");
+      const messages = document.getElementById("sharon-messages");
+      const form = document.getElementById("sharon-form");
+      const input = document.getElementById("sharon-input");
+      const sendButton = document.getElementById("sharon-send");
+
+      const conversation = [];
+
+      if (!launcher || !chat || !messages || !form || !input || !sendButton) {
+        console.error("Sharon: required chat elements were not found.");
+        return;
+      }
+
+      launcher.addEventListener("click", () => {
+        const isOpen = chat.style.display === "block";
+        chat.style.display = isOpen ? "none" : "block";
+
+        if (!isOpen) {
+          setTimeout(() => input.focus(), 50);
+        }
+      });
+
+      function addMessage(text, type) {
+        const message = document.createElement("div");
+
+        message.className =
+          "sharon-message " +
+          (type === "user" ? "sharon-user" : "sharon-bot");
+
+        message.textContent = String(text || "");
+
+        messages.appendChild(message);
+        messages.scrollTop = messages.scrollHeight;
+      }
+
+      function setSending(isSending) {
+        sendButton.disabled = isSending;
+        sendButton.textContent = isSending ? "Sending..." : "Send";
+      }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const question = input.value.trim();
+
+        if (!question || sendButton.disabled) {
+          return;
+        }
+
+        addMessage(question, "user");
+
+        conversation.push({
+          role: "user",
+          content: question
+        });
+
+        input.value = "";
+        setSending(true);
+
+        try {
+          const response = await fetch(API_URL, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              question,
+              conversation,
+              visitor: {}
+            })
+          });
+
+          const rawText = await response.text();
+
+          let data;
+
+          try {
+            data = JSON.parse(rawText);
+          } catch (parseError) {
+            console.error("Sharon: invalid JSON response:", rawText);
+            throw new Error("Sharon returned an invalid response.");
+          }
+
+          console.log("Sharon API response:", data);
+
+          if (!response.ok || !data.success) {
+            throw new Error(
+              data.error || "Sharon is temporarily unavailable."
+            );
+          }
+
+          const answer =
+            typeof data.answer === "string" && data.answer.trim()
+              ? data.answer.trim()
+              : "Thanks for reaching out. How can I help with your project?";
+
+          addMessage(answer, "bot");
+
+          conversation.push({
+            role: "assistant",
+            content: answer
+          });
+
+        } catch (error) {
+          console.error("Sharon chat error:", error);
+
+          addMessage(
+            "I'm having trouble connecting right now. Please try again in a moment.",
+            "bot"
+          );
+        } finally {
+          setSending(false);
+          input.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
